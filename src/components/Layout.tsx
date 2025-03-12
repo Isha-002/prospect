@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 export default function Layout() {
   return (
-    <main>
+    <main className='h-screen'>
       <Navbar />
       <Outlet />
     </main>

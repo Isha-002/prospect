@@ -1,6 +1,6 @@
-const NavbarDashboard = "./icons/navbar-dashboard.svg";
-const NavbarLessons = "./icons/navbar-lessons.svg";
-const NavbarQuiz = "./icons/navbar-quiz.svg";
-const NavbarSetting = "./icons/navbar-setting.svg";
+import NavbarDashboard from "/icons/navbar-dashboard.svg";
+import NavbarLessons from "/icons/navbar-lessons.svg";
+import NavbarQuiz from "/icons/navbar-quiz.svg";
+import NavbarSetting from "/icons/navbar-setting.svg";
 
 export { NavbarDashboard, NavbarLessons, NavbarQuiz, NavbarSetting };

@@ -4,14 +4,16 @@ import '../App.css';
 import { Lesson_7th, Lesson_8th, Lesson_9th } from '/public/icons/lesson.ts';
 const Lessons = () => {
   return (
-    <section className="section-margin p-2">
+    <section className="section-margin p-2 h-full overflow-hidden">
       <div className="flex gap-6">
         {/* not clean but more perfomant than using map  */}
         <Grade i={Lesson_7th} route="7th"/>
         <Grade i={Lesson_8th} route="8th"/>
         <Grade i={Lesson_9th} route="9th"/>
       </div>
-      <Outlet />
+      <div className='flex justify-center items-center h-full'>
+        <Outlet />
+      </div>
     </section>
   );
 };
