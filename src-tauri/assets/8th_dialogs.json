@@ -1,0 +1,99 @@
+{
+  "lessons": [
+    {
+      "title": "My nationality",
+      "dialogue": [
+        {"Shayan": "Mr. Chaychi, this is my cousin Sam. He speaks French, English, and a little Persian."},
+        {"Teacher": "Oh, nice to meet you, Sam."},
+        {"Sam": "Nice to meet you, too."},
+        {"Teacher": "Are you from Iran?"},
+        {"Sam": "Yes, I’m originally Iranian, but I live in France."},
+        {"Teacher": "Welcome to our class. How do you like it in Iran?"},
+        {"Sam": "Iran is great! I love it. It’s a beautiful country."}
+      ]
+    },
+    {
+      "title": "My week",
+      "dialogue": [
+        {"Teacher": "What do you do in the afternoons, Reihaneh?"},
+        {"Student": "Well, I go to the gym on Sundays and Tuesdays."},
+        {"Teacher": "How about Friday mornings?"},
+        {"Student": "I stay at home and relax. Why?"},
+        {"Teacher": "You know, Shiva is not very good at English. Can you help her?"},
+        {"Student": "Oh, sure."},
+        {"Teacher": "That sounds great! When can you start?"},
+        {"Student": "This Wednesday afternoon."},
+        {"Teacher": "That’s fine. Thank you. I’ll let her know."}
+      ]
+    },
+    {
+      "title": "My abilities",
+      "dialogue": [
+        {"Elham": "Wow! Your drawing is very good."},
+        {"Sara": "Thanks. Can you draw?"},
+        {"Elham": "No, I’m not good at drawing. But I can take good photos."},
+        {"Sara": "Really? Can I see your photos?"},
+        {"Elham": "Why not? Come to my house this afternoon."},
+        {"Sara": "Oh, I can’t make it today. How about Thursday afternoon?"},
+        {"Elham": "That’s fine. You can bring your drawing book, too."},
+        {"Sara": "Sure."}
+      ]
+    },
+    {
+      "title": "My health",
+      "dialogue": [
+        {"Teacher": "Are you OK?"},
+        {"Student": "No, I’m not. I have a headache."},
+        {"Teacher": "Oh, you have sore eyes, too. You should go home and rest."},
+        {"Student": "Yes, but we have one more class."},
+        {"Teacher": "Don’t worry. I’ll talk to your teacher."},
+        {"Student": "Thanks for your help."},
+        {"Teacher": "Let’s go to the office and call your parents first. Class, be quiet! I’ll be back in a minute."}
+      ]
+    },
+    {
+      "title": "My city",
+      "dialogue": [
+        {"Phanindra": "Morteza, tell me about Isfahan. Where is it?"},
+        {"Morteza": "Well, Isfahan’s an old city in the center of Iran."},
+        {"Phanindra": "What’s it like?"},
+        {"Morteza": "It’s a big and clean city."},
+        {"Phanindra": "Any famous buildings?"},
+        {"Morteza": "Yes, many. Actually, Isfahan is very famous for its mosques and palaces."},
+        {"Phanindra": "Are there any museums?"},
+        {"Morteza": "Yes, some great ones."},
+        {"Phanindra": "I should see the city soon."},
+        {"Morteza": "Sure, and we can have special food downtown."}
+      ]
+    },
+    {
+      "title": "My village",
+      "dialogue": [
+        {"Sam": "Where are you from, Hamid?"},
+        {"Hamid": "Ghez-ghal’eh."},
+        {"Sam": "Where is it?"},
+        {"Hamid": "It’s a village in West Azarbaijan, near the city of Khoy."},
+        {"Sam": "What’s it like?"},
+        {"Hamid": "It’s a mountain village with many trees and flowers. It’s famous for its sunflower fields."},
+        {"Sam": "What’s the people’s job?"},
+        {"Hamid": "They work on farms and raise animals."},
+        {"Sam": "What about the weather?"},
+        {"Hamid": "There’s a lot of wind in summer, fall and winter. It’s very cold from Aban to Farvardin."},
+        {"Sam": "It sounds to be a very interesting place."}
+      ]
+    },
+    {
+      "title": "My hobbies",
+      "dialogue": [
+        {"Teacher": "Do you have any hobbies, Zahra?"},
+        {"Zahra": "Yes, I do. I watch movies as a hobby."},
+        {"Teacher": "Interesting! How about you, Samira?"},
+        {"Samira": "Well, I love reading."},
+        {"Zahra": "Really? What sort of things do you read?"},
+        {"Samira": "Books, magazines, sports news on the Net, and sometimes poems."},
+        {"Zahra": "And how about you, Mrs. Emami?"},
+        {"Teacher": "Actually, I don’t have any hobbies. But I usually go to the gym in my free time."}
+      ]
+    }
+  ]
+}

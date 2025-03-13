@@ -1,0 +1,82 @@
+{
+  "lessons": [
+    {
+      "title": "Personality",
+      "dialogue": [
+        {"Ehsan": "Who is your best friend at school?"},
+        {"Parham": "Reza."},
+        {"Ehsan": "What’s he like?"},
+        {"Parham": "Oh, he is really great! He’s clever and kind."},
+        {"Ehsan": "Is he hard-working too?"},
+        {"Parham": "Yes! And he’s always very helpful."},
+        {"Ehsan": "How?"},
+        {"Parham": "He always helps me with my lessons."}
+      ]
+    },
+    {
+      "title": "Travel",
+      "dialogue": [
+        {"Receptionist": "Welcome to our hotel sir, how can I help you?"},
+        {"Tourist": "My name is Paul Kress. I’m from Germany. I have a reservation here."},
+        {"Receptionist": "I see! Are you staying here for two nights?"},
+        {"Tourist": "Yes, my wife and I are visiting Tehran for three days."},
+        {"Receptionist": "Where is she now? I need to check her passport."},
+        {"Tourist": "She’s standing over there, by the gift shop. Here is her passport."},
+        {"Receptionist": "Thank you. This is your key. It’s room 213. Hope you enjoy your stay in Tehran."}
+      ]
+    },
+    {
+      "title": "Festivals and Ceremonies",
+      "dialogue": [
+        {"Elham": "I just love New Year holidays!"},
+        {"Nasrin": "Oh, yes, me too. It’s really great."},
+        {"Elham": "We normally visit our relatives in Nowruz. It’s fun!"},
+        {"Nasrin": "Do you get New Year gifts too?"},
+        {"Elham": "Sure! We usually get money. I really like it."},
+        {"Nasrin": "Well…, We always go to my grandparents’ houses."},
+        {"Elham": "That’s nice! Does your grandmother cook the New Year meal?"},
+        {"Nasrin": "Actually, she doesn’t. My mother makes it."}
+      ]
+    },
+    {
+      "title": "Services",
+      "dialogue": [
+        {"Tourist": "Excuse me sir! Can you help me please?"},
+        {"Pedram": "What can I do for you?"},
+        {"Tourist": "I want a postcard, an envelope and a stamp."},
+        {"Pedram": "Umm…, you can get them from a post office."},
+        {"Tourist": "Where is the post office?"},
+        {"Pedram": "Actually it’s near here. It’s just round the corner."},
+        {"Tourist": "Good! Thank you. What time does it open?"},
+        {"Pedram": "It opens at 8."},
+        {"Tourist": "Thanks a lot!"}
+      ]
+    },
+    {
+      "title": "Media",
+      "dialogue": [
+        {"Mina": "Did you enjoy your weekend?"},
+        {"Mahsa": "Yes, it was wonderful! I attended Fajr International Film Festival."},
+        {"Mina": "Really? I am also interested in its events and movies."},
+        {"Mahsa": "Oh, did you watch the reports on TV last night?"},
+        {"Mina": "Yes, I did, but I like to read about them."},
+        {"Mahsa": "Well, you can surf its website if you like. There are many interesting things there."},
+        {"Mina": "That’s great! Could you please give me the website address?"},
+        {"Mahsa": "Why not! Just a moment. Umm… I just texted it."},
+        {"Mina": "Thanks a lot."}
+      ]
+    },
+    {
+      "title": "Health and Injuries",
+      "dialogue": [
+        {"Reza": "We plan to go to the lake. Do you want to come?"},
+        {"Ehsan": "I don’t think so. I don’t like school trips. Last summer I fell and broke my leg."},
+        {"Reza": "It sometimes happens. I twisted my ankle last winter. I stayed home for two weeks!"},
+        {"Ehsan": "That’s too bad! I didn’t know that."},
+        {"Reza": "Yeah…, but after that, I participated in Helal-e-Ahmar first aid classes. I learned how to take care of myself."},
+        {"Ehsan": "I like that. Can you give me some advice?"},
+        {"Reza": "Sure!"}
+      ]
+    }
+  ]
+}
