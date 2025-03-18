@@ -1,5 +1,4 @@
-{
-  "lessons": [
+[
     {
       "title": "My name",
       "dialogue": [
@@ -94,4 +93,4 @@
       ]
     }
   ]
-}
+

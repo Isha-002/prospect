@@ -1,14 +1,18 @@
+import { useEffect } from 'react';
 import { Outlet } from 'react-router';
 import Navbar from './Navbar';
-import { invoke } from '@tauri-apps/api/core';
+import { useStore } from './store';
 
 export default function Layout() {
-  const invoke = window.__TAURI__.core.invoke;
+  const { _7th_dialogs, fetchDialogs } = useStore();
 
-  invoke('load_files')
-  
+  // one is null all is null 🤓
+  useEffect(() => {
+    if (!_7th_dialogs) fetchDialogs()
+  }, []);
+
   return (
-    <main className='h-screen'>
+    <main className="h-screen">
       <Navbar />
       <Outlet />
     </main>
