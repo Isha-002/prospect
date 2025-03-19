@@ -7,6 +7,7 @@ export default function Layout() {
   const { _7th_dialogs, fetchDialogs } = useStore();
 
   // one is null all is null 🤓
+  // save all dialogs in zustand store
   useEffect(() => {
     if (!_7th_dialogs) fetchDialogs()
   }, []);

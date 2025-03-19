@@ -1,6 +1,6 @@
 import { NavLink, NavLinkRenderProps } from "react-router"
 // @ts-ignore
-import { NavbarDashboard, NavbarLessons, NavbarQuiz, NavbarSetting } from "/public/icons/navbar.ts"
+import { NavbarDashboard, NavbarLessons, NavbarQuiz, NavbarSetting } from "../assets/icons/navbar"
 import "../App.css"
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
     {
       name: "Dashboard",
       icon: NavbarDashboard,
-      path: "/dashboard"
+      path: "/"
     },
     {
       name: "Lessons",

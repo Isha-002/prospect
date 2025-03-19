@@ -1,7 +1,6 @@
 import { NavLink, NavLinkRenderProps, Outlet } from 'react-router';
 import '../App.css';
-// @ts-ignore
-import { Lesson_7th, Lesson_8th, Lesson_9th } from '/public/icons/lesson.ts';
+import { Lesson_7th, Lesson_8th, Lesson_9th } from '../assets/icons/lesson.ts';
 const Lessons = () => {
   return (
     <section className="section-margin p-2 h-full overflow-hidden">
@@ -20,10 +19,10 @@ const Lessons = () => {
 
 export default Lessons;
 
+// this component renders the each grade at the top of lessons section [7th, 8th, 9th]
 function Grade({ i, route }: { i: string, route: string }) {
   const style = ({ isActive }: NavLinkRenderProps) =>
     isActive ? active_style : undefined;
-
   const active_style = {
     backgroundColor: 'oklch(0.585 0.233 277.117)',
   };
