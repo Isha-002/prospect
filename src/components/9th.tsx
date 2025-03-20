@@ -1,12 +1,13 @@
-import { Outlet, useLocation } from 'react-router';
+import { Outlet, useLocation, useParams } from 'react-router';
 import { lesson_dialog, lesson_grammar, lesson_vocab_bee, lesson_writing } from '../assets/images/lesson';
 import LearningPath from './lesson/LearningPath';
 
 const Ninth = () => {
 
   const location = useLocation();
-  
-  if (location.pathname.endsWith("units")) {
+  const { subject } = useParams();
+  const path = "9th/" + subject
+  if (location.pathname.endsWith(path)) {
     return <Outlet />;
   }
 
@@ -14,12 +15,12 @@ const Ninth = () => {
     {
       subject: "Dialogs",
       image: lesson_dialog,
-      path: "units"
+      path: "Dialogs"
     },
     {
       subject: "Vocabulary",
       image: lesson_vocab_bee,
-      path: "units",
+      path: "Vocabulary",
     },
     // {
     //   subject: "Writing",
@@ -28,7 +29,7 @@ const Ninth = () => {
     {
       subject: "Grammar",
       image: lesson_grammar,
-      path: "units",
+      path: "Grammar",
     },
   ]
 

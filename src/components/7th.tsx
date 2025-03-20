@@ -1,14 +1,18 @@
-import { Outlet, useLocation } from 'react-router';
+import { Outlet, useLocation, useParams } from 'react-router';
 import { lesson_alphabet, lesson_dialog, lesson_grammar, lesson_numbers, lesson_reading, lesson_speaking, lesson_vocab_leaf } from '../assets/images/lesson';
 import LearningPath from './lesson/LearningPath';
 
 const Seventh = () => {
 
   const location = useLocation();
-  
-  if (location.pathname.endsWith("units")) {
+  const { subject } = useParams();
+  const path = "7th/" + subject
+  if (subject !== "numbers" && subject !== "alphabet") {
+  if (location.pathname.includes(path)) {
     return <Outlet />;
   }
+  }
+
 
   const subjects = [
     {
@@ -24,7 +28,7 @@ const Seventh = () => {
     {
       subject: "Vocabulary",
       image: lesson_vocab_leaf,
-      path: "units",
+      path: "Vocabulary",
     },
     // {
     //   subject: "Speaking",
@@ -37,12 +41,12 @@ const Seventh = () => {
     {
       subject: "Dialogs",
       image: lesson_dialog,
-      path: "units"
+      path: "Dialogs"
     },
     {
       subject: "Grammar",
       image: lesson_grammar,
-      path: "units",
+      path: "Grammar",
     },
   ]
 
@@ -52,7 +56,6 @@ const Seventh = () => {
       {subjects.map((value, i) => (
         <LearningPath learn={value.subject} image={value.image} path={value.path} key={i}/>
       ))}
-      <Outlet />
     </section>
   );
 };

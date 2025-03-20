@@ -10,6 +10,7 @@ import Seventh from './components/7th';
 import Eighth from './components/8th';
 import Ninth from './components/9th';
 import ChooseUnit from './components/lesson/ChooseUnit';
+import WhatToRenderAfterChooseUnit from './components/lesson/WhatToRenderAfterChooseUnit';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -30,17 +31,23 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
         {/* Seventh Grade */}
         <Route path="7th" element={<Seventh />}>
-          <Route path="units" element={<ChooseUnit units={8 + 1} lessonZero={false} />} />
+          <Route path=":subject" element={<ChooseUnit units={8 + 1} lessonZero={false} />}>
+            <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
+          </Route>
         </Route>
 
         {/* Eighth Grade */}
         <Route path="8th" element={<Eighth />}>
-          <Route path="units" element={<ChooseUnit units={7 + 1} lessonZero/>} />
+          <Route path=":subject" element={<ChooseUnit units={7 + 1} lessonZero/>}>
+            <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
+          </Route>
         </Route>
 
         {/* Ninth Grade */}
         <Route path="9th" element={<Ninth />}>
-          <Route path="units" element={<ChooseUnit units={6 + 1} lessonZero/>} />
+          <Route path=":subject" element={<ChooseUnit units={6 + 1} lessonZero/>}>
+            <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
+          </Route>
         </Route>
               
 
