@@ -7,7 +7,7 @@ const Ninth = () => {
   const location = useLocation();
   const { subject } = useParams();
   const path = "9th/" + subject
-  if (location.pathname.endsWith(path)) {
+  if (location.pathname.includes(path)) {
     return <Outlet />;
   }
 

@@ -1,14 +1,27 @@
-import { useLocation } from "react-router"
+import { useLocation, useParams } from "react-router"
+import Grammar from "./Grammar"
+import Vocabulary from "./Vocabulary"
+import Dialog from "./Dialog"
 
 
 const WhatToRenderAfterChooseUnit = () => {
 
-  const location = useLocation()
-  console.log(location.pathname)
+  const { subject } = useParams()
+  
+  if (subject?.toLowerCase() == "grammar") {
+    return <Grammar />
+  }
 
-  return (
-    <div>WhatToRenderAfterChooseUnit</div>
-  )
+  if (subject?.toLowerCase() == "dialogs") {
+    return <Dialog />
+  }
+
+  if (subject?.toLowerCase() == "vocabulary") {
+    return <Vocabulary />
+  }
+
+  return("congracts, you found a bug!")
+
 }
 
 export default WhatToRenderAfterChooseUnit

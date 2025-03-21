@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { shallow } from 'zustand/shallow';
 
 // @ts-ignore
 const invoke = window.__TAURI__.core.invoke;
@@ -41,5 +42,7 @@ export const useStore = create<Store>((set) => ({
       // we just hope things dont go south
       set({ fetch_dialogs_error: error })
     }
-  },
+    shallow
+  }
+  
 }));
