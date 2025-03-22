@@ -9,7 +9,7 @@ pub static DIALOGS: OnceCell<Arc<[String; 3]>> = OnceCell::const_new();
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![get_dialogs])
+        .invoke_handler(tauri::generate_handler![get_dialogs, get_synonyms])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
@@ -24,4 +24,13 @@ fn get_dialogs(grade: u8) -> &'static str {
         9 => &dialogs[2],
         _=> "{{ \"Error\": \"Argument passed to get_dialogs \" }}"
     }
+}
+
+
+#[tauri::command]
+fn get_synonyms(word: String) -> Vec<String> {
+
+    let synonyms: Vec<String> = thesaurus::synonyms(&word);
+    synonyms.into_iter().take(3).collect()
+
 }

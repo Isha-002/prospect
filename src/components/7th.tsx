@@ -1,5 +1,5 @@
 import { Outlet, useLocation, useParams } from 'react-router';
-import { lesson_alphabet, lesson_dialog, lesson_grammar, lesson_numbers, lesson_reading, lesson_speaking, lesson_vocab_leaf } from '../assets/images/lesson';
+import { lesson_alphabet, lesson_dialog, lesson_grammar, lesson_numbers, lesson_vocab_leaf } from '../assets/images/lesson';
 import LearningPath from './lesson/LearningPath';
 
 const Seventh = () => {

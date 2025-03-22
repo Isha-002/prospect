@@ -30,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           >
 
         {/* Seventh Grade */}
+        {/* The lesson zero thing looked good in my head - but not for now */}
         <Route path="7th" element={<Seventh />}>
           <Route path=":subject" element={<ChooseUnit units={8 + 1} lessonZero={false} />}>
             <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
@@ -38,14 +39,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
         {/* Eighth Grade */}
         <Route path="8th" element={<Eighth />}>
-          <Route path=":subject" element={<ChooseUnit units={7 + 1} lessonZero/>}>
+          <Route path=":subject" element={<ChooseUnit units={7 + 1} lessonZero={false}/>}>
             <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
           </Route>
         </Route>
 
         {/* Ninth Grade */}
         <Route path="9th" element={<Ninth />}>
-          <Route path=":subject" element={<ChooseUnit units={6 + 1} lessonZero/>}>
+          <Route path=":subject" element={<ChooseUnit units={6 + 1} lessonZero={false}/>}>
             <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
           </Route>
         </Route>

@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router"
+import { useParams } from "react-router"
 import Grammar from "./Grammar"
 import Vocabulary from "./Vocabulary"
 import Dialog from "./Dialog"

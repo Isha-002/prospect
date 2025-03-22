@@ -3,13 +3,13 @@ use std::{fs::read_to_string, io::Error, path::Path};
 
 pub fn load_files() -> Result<[String; 3], Error> {
     let path = Path::new("assets");
-    let seventh_grade_dialogs = read_to_string(path.join("7th_dialogs.json"))?;
+    let seventh_grade_dialogs = read_to_string(path.join("7th_grade_dialogs.json"))?;
 
 
-    let eighth_grade_dialogs = read_to_string(path.join("8th_dialogs.json"))?;
+    let eighth_grade_dialogs = read_to_string(path.join("8th_grade_dialogs.json"))?;
 
 
-    let ninth_grade_dialogs = read_to_string(path.join("9th_dialogs.json"))?;
+    let ninth_grade_dialogs = read_to_string(path.join("9th_grade_dialogs.json"))?;
 
 
     Ok([

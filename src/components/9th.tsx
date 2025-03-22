@@ -1,5 +1,5 @@
 import { Outlet, useLocation, useParams } from 'react-router';
-import { lesson_dialog, lesson_grammar, lesson_vocab_bee, lesson_writing } from '../assets/images/lesson';
+import { lesson_dialog, lesson_grammar, lesson_vocab_bee} from '../assets/images/lesson';
 import LearningPath from './lesson/LearningPath';
 
 const Ninth = () => {
