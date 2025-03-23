@@ -64,14 +64,18 @@ const Dialog = () => {
   // @ts-ignore
   const d_array = dialogContent.dialogue;
 
-  // handle synonyms
+  // handle definitions
   // @ts-ignore
   const invoke = window.__TAURI__.core.invoke
-  const fetch_synonyms = async () => {
-    const response = await invoke('get_synonyms', { word: selectedWordInfo.text }).then((message) => console.log(message));
+  const fetch_definitions = async () => {
+    await invoke('call_dictionary', { word: selectedWordInfo.text }).then((def: Array<string>) => 
+      {
+      console.log(def)
+      // def.replace("")
+      });
   }
   if (selectedWordInfo.element) {
-    fetch_synonyms()
+    fetch_definitions()
   }
 
   return (

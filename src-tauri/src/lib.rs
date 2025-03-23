@@ -1,15 +1,16 @@
 mod lessons;
-use std::{fmt::format, sync::Arc};
+use std::{collections::HashMap, sync::Arc};
 use tokio::sync::OnceCell;
 
 pub static DIALOGS: OnceCell<Arc<[String; 3]>> = OnceCell::const_new();
+pub static DICTIONARY: OnceCell<HashMap<String, Vec<String>>> = OnceCell::const_new();
 
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![get_dialogs, get_synonyms])
+        .invoke_handler(tauri::generate_handler![get_dialogs, call_dictionary])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
@@ -28,9 +29,11 @@ fn get_dialogs(grade: u8) -> &'static str {
 
 
 #[tauri::command]
-fn get_synonyms(word: String) -> Vec<String> {
-
-    let synonyms: Vec<String> = thesaurus::synonyms(&word);
-    synonyms.into_iter().take(3).collect()
-
+fn call_dictionary(word: String) -> Vec<String> {
+    let definitions = DICTIONARY.get().and_then(|d| d.get(&word));
+    match definitions {
+        Some(v) => v.clone(),
+        None => vec![],
+    }
 }
+
