@@ -51,14 +51,16 @@ const Dialog = () => {
     text: string,
     element: HTMLElement
   ): void => {
-    setSelectedWordInfo(prev =>
+    setSelectedWordInfo((prev) =>
       prev.uid === uid
         ? { uid: null, text: '', element: null }
         : { uid, text, element }
     );
   };
 
-  const dialogContent = dialogs ? dialogs[Number(lesson) - 1] : "Something Gone Wrong..."
+  const dialogContent = dialogs
+    ? dialogs[Number(lesson) - 1]
+    : 'Something Gone Wrong...';
   // @ts-ignore
   const title = dialogContent.title;
   // @ts-ignore
@@ -66,17 +68,32 @@ const Dialog = () => {
 
   // handle definitions
   // @ts-ignore
-  const invoke = window.__TAURI__.core.invoke
+  const invoke = window.__TAURI__.core.invoke;
   const fetch_definitions = async () => {
-    await invoke('call_dictionary', { word: selectedWordInfo.text }).then((def: Array<string>) => 
-      {
-      console.log(def)
-      // def.replace("")
+    try {
+      const def = await invoke('call_dictionary', {
+        word: selectedWordInfo.text,
       });
-  }
+      const synonym = def?.[0] && def[0] !== '' ? def[0] : ' - ';
+      const translation = def?.[1] || ' - ';
+
+      setSynonym(synonym);
+      setTranslation(translation);
+    } catch (error) {
+      console.error('Error fetching definitions:', error);
+      setSynonym('Error');
+      setTranslation('Error');
+    }
+  };
+
   if (selectedWordInfo.element) {
-    fetch_definitions()
+    fetch_definitions();
   }
+
+  ////////////////////////////////////////////////
+  const [synonym, setSynonym] = useState('');
+  const [translation, setTranslation] = useState('');
+  ////////////////////////////////////////////////
 
   return (
     <div className="p-4 relative w-full">
@@ -85,15 +102,21 @@ const Dialog = () => {
         selectedWordUid={selectedWordInfo.uid}
       >
         <div className="max-[1000px]:space-y-4 space-y-6 max-[1000px]:-mt-10 -mt-28 w-[95%]">
-          <h1 className="max-[1000px]:text-3xl text-4xl max-[1000px]:font-bold font-black">Lesson {lesson}</h1>
+          <h1 className="max-[1000px]:text-3xl text-4xl max-[1000px]:font-bold font-black">
+            Lesson {lesson}
+          </h1>
           <p className="text-gray-500 max-[1000px]:text-lg text-2xl">{title}</p>
-            {dialogs && d_array.map((d: Record<string, ReactNode>, i: number) => (
-            <div key={i}>
-              <p className='inline max-[1000px]:font-semibold font-bold max-[1000px]:text-base text-xl text-indigo-800'>{Object.keys(d)[0]} : </p>
-              <span className='max-[1000px]:text-base text-xl'>{Object.values(d)[0] as ReactNode}</span>
-            </div>
+          {dialogs &&
+            d_array.map((d: Record<string, ReactNode>, i: number) => (
+              <div key={i}>
+                <p className="inline max-[1000px]:font-semibold font-bold max-[1000px]:text-base text-xl text-indigo-800">
+                  {Object.keys(d)[0]} :{' '}
+                </p>
+                <span className="max-[1000px]:text-base text-xl">
+                  {Object.values(d)[0] as ReactNode}
+                </span>
+              </div>
             ))}
-          
         </div>
       </ClickableTextWrapper>
 
@@ -108,11 +131,17 @@ const Dialog = () => {
               5
             }px`,
             left: `${selectedWordInfo.element.offsetLeft}px`,
-
           }}
         >
           <div className="text-sm font-medium line">
-            <span className='text-gray-400'>Selected:</span>  {selectedWordInfo.text}
+            <span className="text-gray-400">Selected:</span>{' '}
+            {selectedWordInfo.text}
+          </div>
+          <div className="bg-blue-50 px-2 py-0.5 mb-1 mt-2 rounded-[2px] shadow-sm max-[1000px]:text-sm text-lg text-left font-mono">
+            Synonym: <span>{synonym}</span>
+          </div>
+          <div className="bg-blue-50 px-2 py-0.5 rounded-[2px] shadow-sm max-[1000px]:text-sm text-lg text-left font-mono">
+            Translation: <span className='font-persian'>{translation}</span>
           </div>
         </div>
       )}
@@ -158,7 +187,7 @@ const ClickableTextWrapper = ({
 
   const processString = (text: string, path: number[]): ReactNode[] => {
     const tokens = text.match(wordRegex) || [];
-    
+
     return tokens.map((token, index) => {
       if (!isValidWord(token)) return token;
 
@@ -176,7 +205,8 @@ const ClickableTextWrapper = ({
           }}
           style={{
             cursor: 'pointer',
-            backgroundColor: uid === selectedWordUid ? '#E3C2FF' : 'transparent',
+            backgroundColor:
+              uid === selectedWordUid ? '#E3C2FF' : 'transparent',
             padding: '2px 3px',
             borderRadius: '3px',
             transition: 'background-color 0.2s',

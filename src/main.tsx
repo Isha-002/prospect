@@ -11,6 +11,7 @@ import Eighth from './components/8th';
 import Ninth from './components/9th';
 import ChooseUnit from './components/lesson/ChooseUnit';
 import WhatToRenderAfterChooseUnit from './components/lesson/WhatToRenderAfterChooseUnit';
+import Explore from './components/Explore';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -50,9 +51,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <Route path=':lesson' element={<WhatToRenderAfterChooseUnit/>} />
           </Route>
         </Route>
-              
 
           </Route>
+
+          {/* explore route */}
+          <Route
+            path="explore"
+            element={<Explore />}
+          />
 
           {/* quiz route */}
           <Route
