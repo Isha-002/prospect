@@ -20,3 +20,7 @@ async fn main() {
 
     prospect_lib::run()
 }
+
+// problems:
+// 1. rendering animals component takes time
+// 

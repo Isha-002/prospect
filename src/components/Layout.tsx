@@ -12,6 +12,7 @@ export default function Layout() {
     if (!_7th_dialogs) fetchDialogs()
   }, []);
 
+
   return (
     <main className="h-screen">
       <Navbar />

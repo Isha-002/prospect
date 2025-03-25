@@ -12,6 +12,8 @@ import Ninth from './components/9th';
 import ChooseUnit from './components/lesson/ChooseUnit';
 import WhatToRenderAfterChooseUnit from './components/lesson/WhatToRenderAfterChooseUnit';
 import Explore from './components/Explore';
+import Animals from './components/explore/Animals';
+import Fruits from './components/explore/Fruits';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -58,7 +60,15 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route
             path="explore"
             element={<Explore />}
-          />
+          >
+
+            {/* Animals route */}
+            <Route path="animals" element={<Animals />} />
+
+            {/* Fruits route */}
+            <Route path="fruits" element={<Fruits />}/>
+
+          </Route>
 
           {/* quiz route */}
           <Route

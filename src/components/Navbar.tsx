@@ -22,7 +22,7 @@ export default function Navbar() {
     {
       name: "Lessons",
       icon: NavbarLessons,
-      path: "/lessons"
+      path: "/lessons/7th"
     },
     {
       name: "Explore",
