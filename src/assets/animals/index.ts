@@ -50,30 +50,57 @@ import starfishAudio from './starfish.mp3';
 import turkeyAudio from './turkey.mp3';
 import whaleAudio from './whale.mp3';
 
+import birdImage from './bird.png';
+import camelImage from './camel.png';
+import catImage from './cat.png';
+import chickImage from './chick.png';
+import dolphinImage from './dolphin.png';
+import dragonImage from './dragon.png';
+import fishImage from './fish.png';
+import foxImage from './fox.png';
+import dogImage from './dog.png';
+import gorillaImage from './gorilla.png';
+import jellyfishImage from './jellyfish.png';
+import ladybugImage from './ladybug.png';
+import lionImage from './lion.png';
+import lobsterImage from './lobster.png';
+import owlImage from './owl.png';
+import parrotImage from './parrot.png';
+import penguinImage from './penguin.png';
+import pigImage from './pig.png';
+import porcupineImage from './porcupine.png';
+import seaTurtleImage from './sea-turtle.png';
+import snailImage from './snail.png';
+import squirrelImage from './squirrel.png';
+import starfishImage from './starfish.png';
+import turkeyImage from './turkey.png';
+import whaleImage from './whale.png';
+
 export const AnimalVideoFiles = [
-  { name: "bird", video: birdVideo, audio: birdAudio },
-  { name: "camel", video: camelVideo, audio: camelAudio },
-  { name: "cat", video: catVideo, audio: catAudio },
-  { name: "chick", video: chickVideo, audio: chickAudio },
-  { name: "dolphin", video: dolphinVideo, audio: dolphinAudio },
-  { name: "dragon", video: dragonVideo, audio: dragonAudio },
-  { name: "fish", video: fishVideo, audio: fishAudio },
-  { name: "fox", video: foxVideo, audio: foxAudio },
-  { name: "dog", video: goldenRetrieverVideo, audio: goldenRetrieverAudio },
-  { name: "gorilla", video: gorillaVideo, audio: gorillaAudio },
-  { name: "jellyfish", video: jellyfishVideo, audio: jellyfishAudio },
-  { name: "ladybug", video: ladybugVideo, audio: ladybugAudio },
-  { name: "lion", video: lionVideo, audio: lionAudio },
-  { name: "lobster", video: lobsterVideo, audio: lobsterAudio },
-  { name: "owl", video: owlVideo, audio: owlAudio },
-  { name: "parrot", video: parrotVideo, audio: parrotAudio },
-  { name: "penguin", video: penguinVideo, audio: penguinAudio },
-  { name: "pig", video: pigVideo, audio: pigAudio },
-  { name: "porcupine", video: porcupineVideo, audio: porcupineAudio },
-  { name: "sea-turtle", video: seaTurtleVideo, audio: seaTurtleAudio },
-  { name: "snail", video: snailVideo, audio: snailAudio },
-  { name: "squirrel", video: squirrelVideo, audio: squirrelAudio },
-  { name: "starfish", video: starfishVideo, audio: starfishAudio },
-  { name: "turkey", video: turkeyVideo, audio: turkeyAudio },
-  { name: "whale", video: whaleVideo, audio: whaleAudio }
+  { name: "bird", video: birdVideo, audio: birdAudio, image: birdImage },
+  { name: "camel", video: camelVideo, audio: camelAudio, image: camelImage },
+  { name: "cat", video: catVideo, audio: catAudio, image: catImage },
+  { name: "chick", video: chickVideo, audio: chickAudio, image: chickImage },
+  { name: "dolphin", video: dolphinVideo, audio: dolphinAudio, image: dolphinImage },
+  { name: "dragon", video: dragonVideo, audio: dragonAudio, image: dragonImage },
+  { name: "fish", video: fishVideo, audio: fishAudio, image: fishImage },
+  { name: "fox", video: foxVideo, audio: foxAudio, image: foxImage },
+  { name: "dog", video: goldenRetrieverVideo, audio: goldenRetrieverAudio, image: dogImage },
+  { name: "gorilla", video: gorillaVideo, audio: gorillaAudio, image: gorillaImage },
+  { name: "jellyfish", video: jellyfishVideo, audio: jellyfishAudio, image: jellyfishImage },
+  { name: "ladybug", video: ladybugVideo, audio: ladybugAudio, image: ladybugImage },
+  { name: "lion", video: lionVideo, audio: lionAudio, image: lionImage },
+  { name: "lobster", video: lobsterVideo, audio: lobsterAudio, image: lobsterImage },
+  { name: "owl", video: owlVideo, audio: owlAudio, image: owlImage },
+  { name: "parrot", video: parrotVideo, audio: parrotAudio, image: parrotImage },
+  { name: "penguin", video: penguinVideo, audio: penguinAudio, image: penguinImage },
+  { name: "pig", video: pigVideo, audio: pigAudio, image: pigImage },
+  { name: "porcupine", video: porcupineVideo, audio: porcupineAudio, image: porcupineImage },
+  { name: "sea-turtle", video: seaTurtleVideo, audio: seaTurtleAudio, image: seaTurtleImage },
+  { name: "snail", video: snailVideo, audio: snailAudio, image: snailImage },
+  { name: "squirrel", video: squirrelVideo, audio: squirrelAudio, image: squirrelImage },
+  { name: "starfish", video: starfishVideo, audio: starfishAudio, image: starfishImage },
+  { name: "turkey", video: turkeyVideo, audio: turkeyAudio, image: turkeyImage },
+  { name: "whale", video: whaleVideo, audio: whaleAudio, image: whaleImage }
 ];
+
