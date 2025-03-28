@@ -1,7 +1,6 @@
 export type Card = {
   back: string;
   inner: string;
-  size: [number, number];
 };
 
 const FlipCard = ({ card }: { card: Card }) => {
@@ -11,15 +10,13 @@ const FlipCard = ({ card }: { card: Card }) => {
         <div className="absolute w-full h-full [backface-visibility:hidden]">
           <img
             src={card.inner}
-            width={card.size[0]}
-            height={card.size[1]}
+            className="max-[1000px]:w-[200px] w-[400px]"
           />
         </div>
         <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <img
             src={card.back}
-            width={card.size[0]}
-            height={card.size[1]}
+            className="max-[1000px]:w-[200px] w-[400px]"
           />
         </div>
       </div>
